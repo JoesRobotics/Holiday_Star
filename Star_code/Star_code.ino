@@ -54,12 +54,12 @@ void setup() {
 void loop()
 {
   //increment if button state change
-  Serial.println(digitalRead(buttonPin));
+ // Serial.println(digitalRead(buttonPin));
   if (digitalRead(buttonPin) == 1){
     buttonCounter();
   }
 
-  Serial.println(buttonCount);
+  //Serial.println(buttonCount);
   // State machine for button presses
 
   if ( buttonCount == 0 ){
