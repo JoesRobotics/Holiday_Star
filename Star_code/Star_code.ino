@@ -66,6 +66,7 @@ void loop()
 
   if( buttonCount == 0 )
   {  
+    Serial.println("0 Bright White knob for brightness");
     setBright=1;
     //set brightness white
     for(int whiteLed = 0; whiteLed < NUM_LEDS; whiteLed = whiteLed + 1) {
@@ -83,6 +84,7 @@ void loop()
   if(buttonCount == 1)
   {
    //set color
+    Serial.println("1 Color select knob for color");
     setBright=0;
     hue = map(analogRead(sensorPin),0,1024,0,255);
     for(int whiteLed = 0; whiteLed < NUM_LEDS; whiteLed = whiteLed + 1) {
@@ -96,6 +98,7 @@ void loop()
   if(buttonCount == 2)
   {
   //pride patterns 
+    Serial.println("2 Pride show knob for brightness");
     setBright=1;
     pride();
     FastLED.show();  
@@ -104,6 +107,7 @@ void loop()
   if(buttonCount == 3)
   {
     //cyclon
+    Serial.println("3 color cycle knob for brightness");
     setBright=1;
     static uint8_t hue = 0;
     // slide the led in one direction
@@ -118,6 +122,7 @@ void loop()
   
   if(buttonCount == 4)
     {
+       Serial.println("4 Fire knob for brightness");
        setBright=1;
        Fire2012(); // run simulation frame
        FastLED.show(); // display this frame
@@ -127,6 +132,7 @@ void loop()
   if(buttonCount == 5)
     {
   //set color chasing
+    Serial.println("5 trail knob for color select");
     setBright=0;
     int oldLed =0;
     for(int whiteLed = 0; whiteLed < NUM_LEDS; whiteLed = whiteLed + 1) {
@@ -142,6 +148,7 @@ void loop()
     
   if(buttonCount == 6)
     {
+    Serial.println("6 color changing trail knob for brightness");
     setBright=1;
     static uint8_t hue;
     for(int i = 0; i < NUM_LEDS; i++) {   
@@ -154,6 +161,7 @@ void loop()
 
   if(buttonCount == 7)
     {
+     Serial.println("7 rainbow glitter knob for brightness");
      rainbowWithGlitter();
      FastLED.show();  
      FastLED.delay(1000/FRAMES_PER_SECOND); 
@@ -163,6 +171,7 @@ void loop()
    
   if(buttonCount == 8)
     {
+    Serial.println("8 pastel juggle knob for brightness");
      juggle();
      FastLED.show();  
      FastLED.delay(1000/FRAMES_PER_SECOND);
