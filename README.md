@@ -8,10 +8,9 @@ Solid color selection, many rgb effects like fire, fade, twinkle fade, flash, tr
 Arduino nano 
 
 
-![Pic of star front](star_front.jpg)
-![Pic of star back](star_back.jpg)
+![Pic of star front](star_front.jpg) ![Pic of star back](star_back.jpg)
 
-
+[![Watch the video](20210926_210519.mp4)]
 https://github.com/JoesRobotics/Holiday_Star.git
 
 LED_TYPE    WS2811
